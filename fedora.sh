@@ -170,7 +170,7 @@ usermod -aG docker "${REAL_USER}"
 log "Installing Navicat Premium (Flatpak)"
 
 flatpak install -y \
-    https://dn.navicat.com/flatpak/flatpakref/navicat17/com.navicat.premium.en.flatpakref
+    https://dn.navicat.com/flatpak/flatpakref/navicat17/com.navicat.premium.en.flatpakref || true
 
 # ==============================================================================
 # RESTART IBUS
