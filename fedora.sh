@@ -115,19 +115,10 @@ gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 EOF
 
-# 3. Antigravity Repository Configuration
-cat >/etc/yum.repos.d/antigravity.repo <<'EOF'
-[antigravity-rpm]
-name=Antigravity RPM Repository
-baseurl=https://us-central1-yum.pkg.dev/projects/antigravity-auto-updater-dev/antigravity-rpm
-enabled=1
-gpgcheck=0
-EOF
-
-# 4. Lazydocker COPR Repository
+# 3. Lazydocker COPR Repository
 dnf copr enable atim/lazydocker -y
 
-# 5. Enable Flathub
+# 4. Enable Flathub
 flatpak remote-add --if-not-exists flathub \
     https://flathub.org/repo/flathub.flatpakrepo
 
